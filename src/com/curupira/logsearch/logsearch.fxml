@@ -14,13 +14,14 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                     <children>
                         <Button layoutX="528.0" layoutY="14.0" mnemonicParsing="false" text="Search" onAction="#doSearch" />
-                        <TextField id="searchQuery" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="505.0" promptText="input your search" />
+                        <TextField fx:id="searchQuery" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="505.0" promptText="input your search" />
                         <ScrollPane layoutX="8.0" layoutY="50.0" prefHeight="545.0" prefViewportHeight="200.0" prefViewportWidth="200.0" prefWidth="585.0">
                             <content>
-                                <TextArea id="logResult" layoutX="8.0" layoutY="50.0" prefHeight="542.0" prefWidth="583.0" />
+                                <TextArea fx:id="logResult" layoutX="8.0" layoutY="50.0" prefHeight="542.0" prefWidth="583.0" />
                             </content>
                         </ScrollPane>
-                    </children></AnchorPane>
+                    </children>
+                </AnchorPane>
             </content>
         </Tab>
         <Tab text="Options">
@@ -29,12 +30,13 @@
                     <children>
                         <Button id="FileButton" layoutX="499.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="87.0" text="File"
                                 onAction="#doFileButton"/>
-                        <TextField id="fileInputString" layoutX="10.0" layoutY="14.0" prefHeight="26.0" prefWidth="481.0" promptText="input" />
+                        <TextField fx:id="fileInputString" layoutX="10.0" layoutY="14.0" prefHeight="26.0" prefWidth="481.0" promptText="input" />
                         <Button id="IndexButton" layoutX="498.0" layoutY="54.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Index"
                                 onAction="#doIndexFile"/>
-                        <CheckBox id="isInMemory" layoutX="499.0" layoutY="88.0" mnemonicParsing="false" text="In Memory" />
-                        <TextField id="indexFileString" layoutX="9.0" layoutY="54.0" prefHeight="26.0" prefWidth="482.0" promptText="index file" />
-                    </children></AnchorPane>
+                        <CheckBox fx:id="isInMemory" layoutX="499.0" layoutY="88.0" mnemonicParsing="false" text="In Memory" />
+                        <TextField fx:id="indexFileString" layoutX="9.0" layoutY="54.0" prefHeight="26.0" prefWidth="482.0" promptText="index file" />
+                    </children>
+                </AnchorPane>
             </content>
         </Tab>
     </tabs>
