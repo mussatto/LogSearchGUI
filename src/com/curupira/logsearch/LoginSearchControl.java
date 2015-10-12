@@ -5,6 +5,10 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
+
+import java.awt.*;
+import java.io.File;
 
 public class LoginSearchControl extends VBox{
 
@@ -38,12 +42,20 @@ public class LoginSearchControl extends VBox{
 
     @FXML
     protected  void doFileButton(){
-        System.out.println("File Button");
+        FileChooser fileChooser = new FileChooser();
+        File file = fileChooser.showOpenDialog(LogSearchApplication.scene.getWindow());
+        if (file != null) {
+            fileInputString.setText(file.getAbsolutePath());
+        }
     }
+
 
     @FXML
     protected void doIndexFile(){
-        System.out.println("Index File");
-        System.out.println("to"+indexFileString.getText());
+        FileChooser fileChooser = new FileChooser();
+        File file = fileChooser.showOpenDialog(LogSearchApplication.scene.getWindow());
+        if (file != null) {
+            indexFileString.setText(file.getAbsolutePath());
+        }
     }
 }
